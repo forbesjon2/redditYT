@@ -1,3 +1,4 @@
+import re
 import os
 import sys
 import boto3
@@ -5,6 +6,8 @@ import praw
 import json
 import imgkit
 from subprocess import call
+import moviepy.editor as mpy
+from mutagen.mp3 import MP3
 
 
 class RedditUtils:
@@ -66,7 +69,7 @@ class RedditUtils:
         return res
 
 
-    def getRawText(self, message, forAmazonTTS):
+    def genRawText(self, message, forAmazonTTS):
         """
         removes the links and formats it to amazonTTS if need be
         """
@@ -123,8 +126,6 @@ class RedditUtils:
         title = post.title
         score = post.score
         postText = post.selftext
-        print(title)
-        print(postText)
         content = ""
         with open("./starterHTML/PostTitle.txt", "r") as outfile:
             content = outfile.read()
@@ -146,15 +147,32 @@ class RedditUtils:
             return str(number)
         return  "00" + str(number) if (number < 10 and number < 100) else "0" + str(number)
 
-    def textToMp3(self, message, globalCount):
-        # text to mp3. save to ./audio
+    def genVideoClip(self, html, message, globalCount):
+        """
+        generates a video clip for a particular post (or reply) given the html,
+        raw message, and globalCount
+
+        returns: nothing
+        """
         audioLocation = "audio/out" + str(self.number_padding(globalCount)) + ".mp3"
+        imageLocation = "img/out" + str(self.number_padding(globalCount)) + ".jpg"
+        videoLocation = "video/out" + str(self.number_padding(globalCount)) + ".mp4"
+
+        # text to mp3. save to ./audio
         audioTextSSML = '<speak><prosody rate="1.05">' + self.genRawText(message, True) + '<break time="0.25s" /> </prosody></speak>'
         response = self.polly_client.synthesize_speech(VoiceId='Matthew',OutputFormat='mp3', Text=audioTextSSML, TextType= 'ssml')
         file = open(audioLocation, 'wb')
         file.write(response['AudioStream'].read())
         file.close()
-
-    def htmlToImg(self, html, globalCount):
-        imageLocation = "img/out" + str(self.number_padding(globalCount)) + ".jpg"
+        
+        # create image
         imgkit.from_string(html, imageLocation, options={"xvfb":""})
+        
+        # combine images and audio, save to ./video
+        clip = mpy.ImageClip(imageLocation, duration=MP3(audioLocation).info.length)
+        clip.audio = (mpy.AudioFileClip(audioLocation))
+        clip.write_videofile(videoLocation, fps=10, verbose=True)
+        if os.path.exists(imageLocation):
+            os.remove(imageLocation)
+        if os.path.exists(audioLocation):
+            os.remove(audioLocation)
