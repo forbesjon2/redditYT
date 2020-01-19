@@ -39,7 +39,10 @@ class RedditUtils:
         for submission in self.redditInstance.subreddit(self.board).top(self.timeFrame):
             if count > self.numberOfTopPosts:
                 break
-            print(str(count) + ". " +  submission.title + "\n")
+            try:
+                print(str(count) + ". " +  submission.title + "\n")
+            except:
+                pass
             submissions.append(submission)
             count += 1
         return submissions
@@ -89,7 +92,7 @@ class RedditUtils:
         post = comment.body
         cwd = os.getcwd() + "/starterHTML/"
         content = ""
-        with open("./starterHTML/OneComment.txt", "r") as outfile:
+        with open("./starterHTML/OneComment.txt", "r", encoding="utf-8") as outfile:
             content = outfile.read()
             outfile.close()
         content = content.replace("^^author^^", author).replace("^^points^^", str(points))
@@ -109,7 +112,7 @@ class RedditUtils:
         post2 = comment2.body
         cwd = os.getcwd() + "/starterHTML/"
         content = ""
-        with open("./starterHTML/TwoComment.txt", "r") as outfile:
+        with open("./starterHTML/TwoComment.txt", "r", encoding="utf-8") as outfile:
             content = outfile.read()
             outfile.close()
         content = content.replace("^^author^^", author).replace("^^points^^", str(points)).replace("^^content^^", post)
@@ -127,7 +130,7 @@ class RedditUtils:
         score = post.score
         postText = post.url
         content = ""
-        with open("./starterHTML/PostTitle.txt", "r") as outfile:
+        with open("./starterHTML/PostTitle.txt", "r", encoding="utf-8") as outfile:
             content = outfile.read()
             outfile.close()
             content = content.replace("^^board^^", board).replace("^^author^^", author).replace("^^upvotes^^",str(score))
@@ -187,7 +190,7 @@ class RedditUtils:
         imageLocation = os.getcwd() + "/output/" + str(imgLocation) + ".jpg"
         title = title[:170:1]
         content = ""
-        with open("./starterHTML/Thumbnail.txt", "r") as outfile:
+        with open("./starterHTML/Thumbnail.txt", "r", encoding="utf-8") as outfile:
             content = outfile.read()
             outfile.close()
         content = content.replace("^^board^^", self.board).replace("^^title^^", title)
