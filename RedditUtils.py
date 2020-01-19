@@ -125,7 +125,7 @@ class RedditUtils:
         author = post.author.name
         title = post.title
         score = post.score
-        postText = post.selftext
+        postText = post.url
         content = ""
         with open("./starterHTML/PostTitle.txt", "r") as outfile:
             content = outfile.read()
@@ -176,3 +176,19 @@ class RedditUtils:
             os.remove(imageLocation)
         if os.path.exists(audioLocation):
             os.remove(audioLocation)
+
+    def createThumbnail(self, title, imgLocation):
+        """
+        Creates the thumbnail for the youtube video
+        subReddit:      subreddit the post is on
+        title:      post title
+        imgLocation: location of the output image. this includes it's name
+        """
+        imageLocation = os.getcwd() + "/output/" + str(imgLocation) + ".jpg"
+        title = title[:170:1]
+        content = ""
+        with open("./starterHTML/Thumbnail.txt", "r") as outfile:
+            content = outfile.read()
+            outfile.close()
+        content = content.replace("^^board^^", self.board).replace("^^title^^", title)
+        imgkit.from_string(content, imageLocation, options={"xvfb":""})

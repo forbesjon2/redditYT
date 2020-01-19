@@ -1,0 +1,9 @@
+<div style="width:1280px; height:720px;background-color: rgb(10, 1, 1);color: white;">
+    <div style="padding:20px;display: flex; flex-direction: row;align-items: stretch;max-height: 110px;">
+        <div style="flex-grow: 4;"><span style="color: #af0a0f;font-size: 75px; font-family: Tahoma,sans-serif;">r/^^board^^</span></div>
+        <div style="flex-grow: 1;"></div>
+    </div>
+    <div style="padding:20px; padding-top: 35px;height: 490px;display: table-cell; vertical-align: middle;">
+        <div><span style="color: #ffffff; text-align: center; overflow: hidden; font-weight: 700; font-family: Arial, Helvetica, sans-serif; font-size: 60px;line-height: 95px;">^^title^^</span></div>
+    </div>
+</div>
