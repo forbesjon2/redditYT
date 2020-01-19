@@ -77,43 +77,60 @@ class RedditUtils:
         return message
 
 
-    def generateOneComment(self, author, points, content):
+    def generateOneComment(self, comment):
         """
         returns the HTML for one comment
         """
+        author = comment.author.name
+        points = comment.score
+        post = comment.body
+        cwd = os.getcwd() + "/starterHTML/"
         content = ""
         with open("./starterHTML/OneComment.txt", "r") as outfile:
             content = outfile.read()
             outfile.close()
-        content = content.replace("^^author^^", author)
-        content = content.replace("^^points^^", str(points))
-        content = content.replace("^^content^^", content)
+        content = content.replace("^^author^^", author).replace("^^points^^", str(points))
+        content = content.replace("^^content^^", post).replace("^^CWD^^", cwd)
         return content
 
 
-    def generateTwoComments(self, author, points, content, author2, points2, content2):
+    def generateTwoComments(self, comment, comment2):
         """
         returns the HTML for two comments
         """
+        author = comment.author.name
+        points = comment.score
+        post = comment.body
+        author2 = comment2.author.name
+        points2 = comment2.score
+        post2 = comment2.body
+        cwd = os.getcwd() + "/starterHTML/"
         content = ""
         with open("./starterHTML/TwoComment.txt", "r") as outfile:
             content = outfile.read()
             outfile.close()
-        content = content.replace("^^author^^", author).replace("^^points^^", str(points)).replace("^^content^^", content)
-        content = content.replace("^^author2^^", author2).replace("^^points2^^", str(points2)).replace("^^content2^^", content2)
+        content = content.replace("^^author^^", author).replace("^^points^^", str(points)).replace("^^content^^", post)
+        content = content.replace("^^author2^^", author2).replace("^^points2^^", str(points2)).replace("^^content2^^", post2).replace("^^CWD^^", cwd)
         return content
 
 
-    def generatePostTitle(self, board, author, title, content):
+    def generatePostTitle(self, post):
         """
         Returns the HTML for the post title
         """
+        board = post.subreddit.display_name
+        author = post.author.name
+        title = post.title
+        score = post.score
+        postText = post.selftext
+        print(title)
+        print(postText)
         content = ""
         with open("./starterHTML/PostTitle.txt", "r") as outfile:
             content = outfile.read()
             outfile.close()
-            content = content.replace("^^board^^", board).replace("^^author^^", author)
-            content = content.replace("^^title^^", title).replace("^^content^^", content)
+            content = content.replace("^^board^^", board).replace("^^author^^", author).replace("^^upvotes^^",str(score))
+            content = content.replace("^^title^^", title).replace("^^content^^", postText)
         return content
 
 
@@ -139,5 +156,5 @@ class RedditUtils:
         file.close()
 
     def htmlToImg(self, html, globalCount):
-        imgLocation = "img/out" + str(self.number_padding(globalCount)) + ".jpg"
+        imageLocation = "img/out" + str(self.number_padding(globalCount)) + ".jpg"
         imgkit.from_string(html, imageLocation, options={"xvfb":""})

@@ -1,4 +1,4 @@
-<html style="background-color: rgba(25,25,25,1);">
+<html style="background-color: rgba(25,25,25,1); width: 1000px;height:700px;">
 <head><link href="//c.aaxads.com/aax.js?pub=AAX763KC6&amp;hst=www.reddit.com&amp;ver=1.2" rel="preload" as="script"><link href="//c.amazon-adsystem.com/aax2/apstag.js" rel="preload" as="script"><link href="//www.googletagservices.com/tag/js/gpt.js" rel="preload" as="script"><script>
     var __SUPPORTS_TIMING_API = typeof performance === 'object' && !!performance.mark && !! performance.measure && !!performance.getEntriesByType;
     function __perfMark(name) { __SUPPORTS_TIMING_API && performance.mark(name); };
@@ -471,7 +471,7 @@ button{color: rgba(129,131,132,1);}
 
 
 
-
+<div style="margin: auto auto; width: 700px;margin-top: 100px;">
 <div>
     <div>
         <div id="t1_fesbbfy" style="padding-left: 16px;" tabindex="-1" class="_3sf33-9rVAO_v4y0pIW_CH _1XNv4WhzL_uEQ36cwbjMOe">
@@ -482,12 +482,6 @@ button{color: rgba(129,131,132,1);}
                 </div>
             </div>
             <div class="P8SGAKMtRxNwlmLz1zdJu Comment t1_fesbbfy _1z5rdmX8TDr6mqwNv7A70U">
-                <div class="_1E9mcoVn4MYnuBQSVDt1gC kB7GZ7EzNg1Msq-nEnY0z">
-                    <button aria-label="upvote" aria-pressed="false" class="voteButton _2m5vzALl8kQdr9kwIFUo5t " data-click-id="upvote"><span class="_3wVayy5JvIMI67DheMYra2 _3SUsITjKNQ7Tp0Wi2jGxIM _22nWXKAY6OzAfK5GcUqWV2 qW0l8Af61EP35WIG6vnGk _3edNsMs0PNfyQYofMNVhsG"><i class="icon icon-upvote _2Jxk822qXs4DaXwsN7yyHA _39UOLMgvssWenwbRxz_iEn"></i></span>
-                    </button>
-                    <button aria-label="downvote" aria-pressed="false" class="voteButton _2m5vzALl8kQdr9kwIFUo5t " data-click-id="downvote"><span class="jR747Vd1NbfaLusf5bHre Q0BxYHtCOJ_rNSPJMU2Y7 _22nWXKAY6OzAfK5GcUqWV2 _2fe-KdD2OM0ciaiux-G1EL _3yQIOwaIuF6gn8db96Gu7y"><i class="icon icon-downvote ZyxIIl4FP5gHGrJDzNpUC _2GCoZTwJW7199HSwNZwlHk"></i></span>
-                    </button>
-                </div>
                 <div class="_3tw__eCCe7j-epNCKGXUKk "><span class="_1RIl585IYPW6cmNXwgRz0J">level 1</span>
                     <div class="_1S45SPAIb30fsXtEcKPSdt  _3ezOJqKdLbgkHsXcfvS5SA ">
                         <div class="_2mHuuvyV9doV3zwbZPtIPG"><a class="_23wugcdiaj44hdfugIAlnX " href="/user/negative_epsilon/" style="color:rgb(107,187,249);">^^author^^</a>
@@ -500,18 +494,8 @@ button{color: rgba(129,131,132,1);}
                         <div theme="[object Object]" style="color: rgb(216, 218, 220);" class="_292iotee39Lmt0MkQZ2hPV RichTextJSON-root">
                             <p class="_1qeIAgB0cPwnLhDF9XSiJM">^^content^^</p>
                           
-                    <div class="XZK-LTFT5CgGo9MvPQQsy _1LXnp2ufrzN6ioaTLTjGQ1 _2t8wLytikHzPCUnvXdS_wu FOPddbU-vkQ5LYmQP6Fgc">
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov"><i class="icon icon-comment _3ch9jJ0painNf41PmU4F9i _1g4YvNNIFoV_5_EhsVfyRy"></i>Reply</button>
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov">Give Award</button>
-                        <div id="t1_fesbbfy-comment-share-menu">
-                            <button class="_374Hkkigy4E4srsI2WktEd">share</button>
-                        </div>
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov">Report</button>
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov">Save</button>
-                        <div class="hrV8gUgmt0V7wM2wgZ81l _1YnPvd-E5MbmcM3PvRRcX _14hLFU5cIJCyxH9DSgsCov">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="more options" id="t1_fesbbfy-overflow-menu" class="_2pFdCpgBihIaYh9DSMWBIu _1VR6DV38j4rMT5OMeU4gJZ uMPgOFYlCc5uvpa2Lbteu"><i class="icon icon-menu _2L8b_l8zFzAkWuMyZJ1_vg _38GxRFSqSC-Z2VLi5Xzkjy"></i>
-                            </button>
-                        </div>
+                    <div class="XZK-LTFT5CgGo9MvPQQsy _1LXnp2ufrzN6ioaTLTjGQ1 _2Ik7QEXtA-lbZKj0ssL89G FOPddbU-vkQ5LYmQP6Fgc">
+                        <img src="^^CWD^^bar.png" width="270">
                     </div>
                 </div>
             </div>
@@ -528,7 +512,6 @@ button{color: rgba(129,131,132,1);}
 
 
 
-<!-- Comment 2 -->
 
 <div>
     <div>
@@ -542,12 +525,6 @@ button{color: rgba(129,131,132,1);}
                 </div>
             </div>
             <div class="P8SGAKMtRxNwlmLz1zdJu Comment t1_feti47j">
-                <div class="_1E9mcoVn4MYnuBQSVDt1gC kB7GZ7EzNg1Msq-nEnY0z">
-                    <button aria-label="upvote" aria-pressed="false" class="voteButton _2m5vzALl8kQdr9kwIFUo5t " data-click-id="upvote"><span class="_3wVayy5JvIMI67DheMYra2 _3SUsITjKNQ7Tp0Wi2jGxIM _22nWXKAY6OzAfK5GcUqWV2 qW0l8Af61EP35WIG6vnGk _3edNsMs0PNfyQYofMNVhsG"><i class="icon icon-upvote _2Jxk822qXs4DaXwsN7yyHA _39UOLMgvssWenwbRxz_iEn"></i></span>
-                    </button>
-                    <button aria-label="downvote" aria-pressed="false" class="voteButton _2m5vzALl8kQdr9kwIFUo5t " data-click-id="downvote"><span class="jR747Vd1NbfaLusf5bHre Q0BxYHtCOJ_rNSPJMU2Y7 _22nWXKAY6OzAfK5GcUqWV2 _2fe-KdD2OM0ciaiux-G1EL _3yQIOwaIuF6gn8db96Gu7y"><i class="icon icon-downvote ZyxIIl4FP5gHGrJDzNpUC _2GCoZTwJW7199HSwNZwlHk"></i></span>
-                    </button>
-                </div>
                 <div class="_3tw__eCCe7j-epNCKGXUKk "><span class="_1RIl585IYPW6cmNXwgRz0J">level 2</span>
                     <div class="_1S45SPAIb30fsXtEcKPSdt  _3ezOJqKdLbgkHsXcfvS5SA ">
                         <div class="_2mHuuvyV9doV3zwbZPtIPG"><a class="_23wugcdiaj44hdfugIAlnX " href="/user/NotATuring/" style="color:rgb(107,187,249);">^^author2^^</a>
@@ -556,27 +533,15 @@ button{color: rgba(129,131,132,1);}
                         <span class="_2ETuFsVzMBxiHia6HfJCTQ _3_GZIIN1xcMEC5AVuv4kfa" style="color: rgb(129,131,132);">^^points2^^ points</span><span class="_2ETuFsVzMBxiHia6HfJCTQ _3_GZIIN1xcMEC5AVuv4kfa">
                         <div class="_2LeW9tc_6Fs1n7Ou8uD-70"></div>
                     </div>
-                    <div data-test-id="comment" class="_3cjCphgls6DH-irkVaA0GM">
+                    <div data-test-id="comment" class="_3cjCphgls6DH-irkVaA0GM" style="margin:0px;padding:0px;">
                         <div theme="[object Object]" style="color: rgb(215, 218, 220);" class="_292iotee39Lmt0MkQZ2hPV RichTextJSON-root">
                             <p class="_1qeIAgB0cPwnLhDF9XSiJM">^^content2^^</p>
-                        </div>
-                    </div>
-                    <div class="XZK-LTFT5CgGo9MvPQQsy _1LXnp2ufrzN6ioaTLTjGQ1 _2Ik7QEXtA-lbZKj0ssL89G FOPddbU-vkQ5LYmQP6Fgc">
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov"><i class="icon icon-comment _3ch9jJ0painNf41PmU4F9i _1g4YvNNIFoV_5_EhsVfyRy"></i>Reply</button>
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov">Give Award</button>
-                        <div id="t1_feti47j-comment-share-menu">
-                            <button class="_374Hkkigy4E4srsI2WktEd">share</button>
-                        </div>
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov">Report</button>
-                        <button class="_374Hkkigy4E4srsI2WktEd _2hr3tRWszeMRQ0u_Whs7t8 _14hLFU5cIJCyxH9DSgsCov">Save</button>
-                        <div class="hrV8gUgmt0V7wM2wgZ81l _1YnPvd-E5MbmcM3PvRRcX _14hLFU5cIJCyxH9DSgsCov">
-                            <button aria-expanded="false" aria-haspopup="true" aria-label="more options" id="t1_feti47j-overflow-menu" class="_2pFdCpgBihIaYh9DSMWBIu _1VR6DV38j4rMT5OMeU4gJZ uMPgOFYlCc5uvpa2Lbteu"><i class="icon icon-menu _2L8b_l8zFzAkWuMyZJ1_vg _38GxRFSqSC-Z2VLi5Xzkjy"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </html>
