@@ -154,9 +154,9 @@ class RedditUtils:
 
         returns: nothing
         """
-        audioLocation = "audio/out" + str(self.number_padding(globalCount)) + ".mp3"
-        imageLocation = "img/out" + str(self.number_padding(globalCount)) + ".jpg"
-        videoLocation = "video/out" + str(self.number_padding(globalCount)) + ".mp4"
+        audioLocation = os.getcwd() + "/audio/out" + str(self.number_padding(globalCount)) + ".mp3"
+        imageLocation = os.getcwd() + "/img/out" + str(self.number_padding(globalCount)) + ".jpg"
+        videoLocation = os.getcwd() + "/video/out" + str(self.number_padding(globalCount)) + ".mp4"
 
         # text to mp3. save to ./audio
         audioTextSSML = '<speak><prosody rate="1.05">' + self.genRawText(message, True) + '<break time="0.25s" /> </prosody></speak>'

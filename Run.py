@@ -9,10 +9,11 @@ def runMain(utilsInstance):
 
     for post in postNos.split(" "):
         globalCount += 1
-        topComments = utilsInstance.getTopComments(numTopComments, submissionsList[int(post)].comments.list())
-        # Post title then html to img
-        utilsInstance.htmlToImg(utilsInstance.generatePostTitle(submissionsList[int(post)]), globalCount)
-        
+
+        postHtml = utilsInstance.generatePostTitle(submissionsList[int(post)])
+        utilsInstance.genVideoClip(postHtml, submissionsList[int(post)].title, globalCount)
+
+        topComments = utilsInstance.getTopComments(numTopComments, submissionsList[int(post)].comments.list())        
 
         # commentsList = submissionsList[int(post)].comments.list()
         for comment, reply in topComments:
