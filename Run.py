@@ -26,7 +26,6 @@ def runMain(utilsInstance, subReddit):
         utilsInstance.genVideoClip(postHtml, submissionsList[int(post)].title, globalCount)
 
         topComments = utilsInstance.getTopComments(numTopComments, submissionsList[int(post)].comments.list())        
-        continue
         # commentsList = submissionsList[int(post)].comments.list()
         for commentList in topComments:
             
