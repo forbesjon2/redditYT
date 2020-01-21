@@ -49,7 +49,9 @@ class RedditUtils:
     def getTopComments(self, numTopComments, post):
         """
         this will return the top comments and the reply attached
-        to each of the top comments
+        to each of the top comments. Checks if a reply exists
+        and adds that to the list. If a reply doesn't exist it'll
+        keep the OP
 
         given submissionsList from returnTop()...
         post = submissionsList[0].comments.list()
@@ -59,12 +61,15 @@ class RedditUtils:
         (https://praw.readthedocs.io/en/latest/code_overview/models/comment.html)
 
         format
-        [[comment, reply], [comment, reply]]
+        [[comment, reply], [comment, reply], [comment]]
         """
         res = []
         count = 0
         while count < numTopComments:
-            res.append([post[count], post[count].replies.list()[0]])
+            if(len(post[count].replies.list())) > 1:
+                res.append([post[count], post[count].replies.list()[0]])
+            else:
+                res.append([post[count]])
             count += 1
         return res
 

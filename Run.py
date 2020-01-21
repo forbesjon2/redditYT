@@ -12,6 +12,8 @@ def daysSinceEpoch():
 
 
 def runMain(utilsInstance, subReddit):
+    call(["./reset.sh"], shell=True)
+
     submissionsList = utilsInstance.returnTop()
     postNos = input("enter post numbers (separated by a space): ")
     numTopComments = int(input("how many top comments: "))
@@ -24,18 +26,20 @@ def runMain(utilsInstance, subReddit):
         utilsInstance.genVideoClip(postHtml, submissionsList[int(post)].title, globalCount)
 
         topComments = utilsInstance.getTopComments(numTopComments, submissionsList[int(post)].comments.list())        
-
+        continue
         # commentsList = submissionsList[int(post)].comments.list()
-        for comment, reply in topComments:
+        for commentList in topComments:
+            
             # first comment, create image & audioFile
             globalCount += 1
-            html = utilsInstance.generateOneComment(comment)
-            utilsInstance.genVideoClip(html, comment.body, globalCount)
+            html = utilsInstance.generateOneComment(commentList[0])
+            utilsInstance.genVideoClip(html, commentList[0].body, globalCount)
             
-            # create image and audiofile for second comment
-            globalCount += 1
-            html = utilsInstance.generateTwoComments(comment, reply)
-            utilsInstance.genVideoClip(html, reply.body, globalCount)
+            # create image and audiofile for second comment if one exists
+            if(len(commentList) == 2):
+                globalCount += 1
+                html = utilsInstance.generateTwoComments(commentList[0], commentList[1])
+                utilsInstance.genVideoClip(html, commentList[1].body, globalCount)
         fileName = subReddit + "_" + daysSinceEpoch() + "_" + str(random.randint(1,1000000))
         # combine the individual video files into one file and put it in /output
         call(["./cleanCombine.sh " + fileName], shell=True)
