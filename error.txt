@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "sandbox.py", line 6, in <module>
+    runMain(topNews, "news")
+  File "/home/redditYT/Run.py", line 40, in runMain
+    html = utilsInstance.generateTwoComments(commentList[0], commentList[1])
+  File "/home/redditYT/RedditUtils.py", line 115, in generateTwoComments
+    author2 = comment2.author.name
+AttributeError: 'NoneType' object has no attribute 'name'
