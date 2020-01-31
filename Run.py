@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from RedditUtils import RedditUtils
 from subprocess import call
 import datetime
@@ -15,11 +17,13 @@ def runMain(utilsInstance, subReddit):
     call(["./reset.sh"], shell=True)
 
     submissionsList = utilsInstance.returnTop()
-    postNos = input("enter post numbers (separated by a space): ")
-    numTopComments = int(input("how many top comments: "))
+    #postNos = input("enter post numbers (separated by a space): ")
+    numTopComments = 14 #int(input("how many top comments: "))
     globalCount = 0
-
-    for post in postNos.split(" "):
+    
+    top = [0,1,2,3,4]
+    #for post in postNos.split(" "):
+    for post in top:
         globalCount += 1
         title = submissionsList[int(post)].title
         postHtml = utilsInstance.generatePostTitle(submissionsList[int(post)])
@@ -43,12 +47,15 @@ def runMain(utilsInstance, subReddit):
         # combine the individual video files into one file and put it in /output
         call(["./cleanCombine.sh " + fileName], shell=True)
         # create a thumbnail
-        utilsInstance.createThumbnail(title, fileName)
-        youtubeUpload(title, submissionsList[int(post)].url, subReddit, fileName)
+        try:
+            utilsInstance.createThumbnail(title, fileName)
+            youtubeUpload(title, submissionsList[int(post)].url, subReddit, fileName)
+        except:
+            pass
 
 def youtubeUpload(videoTitle, videoDesc, board, fileName):
     #upload video to youtube
-    videoParams = '--title "' + videoTitle +  '" --client-secrets="./yt_creds_file.json" --category=Entertainment --description="' + videoDesc + '" --tags="reddit,' + board + ',trending" --default-language="en" --privacy="private" --default-audio-language="en" --embeddable=True --thumbnail ./output/' + fileName + '.jpg ./output/' + fileName + '_vid.mp4'
+    videoParams = '--title "' + videoTitle +  '" --client-secrets="./yt_creds_file.json" --category=Entertainment --description="' + videoDesc + '" --tags="reddit,' + board + ',trending" --default-language="en" --privacy="public" --default-audio-language="en" --embeddable=True --thumbnail ./output/' + fileName + '.jpg ./output/' + fileName + '_vid.mp4'
     print("calling...")
-    print("youtube-upload " + videoParams)
+    print("youtube-upload ")# + videoParams)
     call(["youtube-upload " + videoParams], shell=True)
