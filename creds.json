@@ -1,13 +1,13 @@
 {
     "type": "service_account",
-    "project_id": "main-221418",
-    "private_key_id": "91780a637fc4354fff06f937d92dac6bf6aef931",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDP1QV7XVV4eJPb\n4Ri7UmPTm7FRGj+uyU71/+ORGkjjClZg9ch0hqg5xEQPRgFxB1uUzWhJ8BUeQGkB\nixhH4Pg9pw6pk9A7/B0d1f2dkRKkIXl8RnFmas1Ate38+Gd/XmQcjCeH/C8rwkqB\nNOf/83rGk2TqT9dEga5O+7xd8FCmme8Q7u61zXeW3ZmDjXWkd0PWyx8qRrBc2aKH\noJZis/WrsxxigDJmn2X0dLSiFuus/IVj64wbw6X+e70nYE/ZvayZk5aJZ6WqVpR7\nrXMkQiBrzz4lmJjaYNp5h/zPJamabUZ5XxdEYmj4MwnkTB28yjj99EIWJjxIj4ep\nfLyVMUHJAgMBAAECggEANTtopgpn4+1uYbkr7n7R1tdf+Vfxy8EAGn4qOXY0CQMS\n0M7jQwVifTlJ/Wd+4wZxbJGYDqgRoKf6vUx1MaPrsU7isIiNo2+VvZib1wnbbnKs\nfSpFzWe5nsN6a3rsd3EjzzQOxAPRyTGAh8uXSLWCUu5ZwLImfwOAM/bCboUpAyKg\nEaYcdccw3Cmeh1FQOFI78BXj9mE5Ga5NqKTxTWAn0o2DbD+L7mLus9W7VnoGozGH\n4aYJZJ412wA62Q0eE2pe7Qx/mB+PCfLonLu83n+0upKM85bHt/5rKMlpamEg3y+z\n7HcuVC7dQ29yjOd8DxypY4rCWLtCd0Ho1PByV/IxaQKBgQDxjUlnssRJrzVdKvyx\nYL5gK8BUN89TOvAVxQgG+QB62ICW+o9MhTcOF+4OECgkyY+l/soqB4OOkvXZZMn4\nwuBGIH7k81KUQx41LOH1hMwjgVX9EsQ/IbOmud6XcjeLNCb+IPprF+jmeN+JGYve\nrW96+0zPU6EuDGAghHtxN2gjpwKBgQDcQ2hPGqZAu/i4C9Nrcw3Fd3dwUp6oZYsg\nfte616Mc1rcU29UT6I/yvKUqNjld6etoTHyBi/mn8tt6wQg/G19NKl1uI0G0YXyY\niMXqPEqYj7Y78nisVqRuO31RawtKKh3Z3asegOKJBSgJ3GFfI3l67ylLmoH06S8/\nwQgjQDDdDwKBgDQAg8YUYVevpaBqKb6SIkoYAS7gWP0FGjzFj0XZA3Zu97gJNyJ1\nJ3YcRr62Ub4hupA0+xbzSSo/jzf/D9BDO/887bSigauzi2RNRlQSA9S8+mMiUCd7\nPO7u4vHdwAFy99YMCX1Wx2geq5kba9ZDplVmlpGn4nJEbclyXBTypbPPAoGBAJTe\nIjPEqTT7VoDdzUjD/DzIH7uUu5LI/p053Yh0kdO98wNwCLVp61B924uKFn+4x9g4\nSbYs6tFuPJTcvjwYvfKjfX4g6hmGAfX+CvXjRe+SwfIGUTT5Yiz2nB5ZIMpBaOeF\nAFCff3xoNcVkY5MvoL1LwzdL+CWVLNAEIQHiMqRVAoGBAMIL3dysmcH+YCHMOa8i\nz0i/UO6PtpThBHc5wZDeS9ABana+WFEwVfyPoJ8G3wAN8TW7BLbv303y+GM9fhOH\nHg+ZH7mgGGQYHbEx/3dWrZ+zZScepQSgkcdxDCd8/j8lqAzKtWaipVIRH/udBDpF\nCIylm7C6IONWkP5G6z+kqXlx\n-----END PRIVATE KEY-----\n",
-    "client_email": "reddityt-464@main-221418.iam.gserviceaccount.com",
-    "client_id": "102262868592828683544",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/reddityt-464%40main-221418.iam.gserviceaccount.com"
+    "project_id": "",
+    "private_key_id": "",
+    "private_key": "",
+    "client_email": "",
+    "client_id": "",
+    "auth_uri": "",
+    "token_uri": "",
+    "auth_provider_x509_cert_url": "",
+    "client_x509_cert_url": ""
   }
   
