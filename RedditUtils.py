@@ -173,7 +173,7 @@ class RedditUtils:
         file.write(response['AudioStream'].read())
         file.close()
         
-        # create image
+        # create image 
         imgkit.from_string(html, imageLocation, options={"xvfb":""})
         
         # combine images and audio, save to ./video
