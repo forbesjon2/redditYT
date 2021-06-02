@@ -79,7 +79,7 @@ ufw==0.36
 unattended-upgrades==0.1
 update-checker==0.16
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 websocket-client==0.56.0
 zope.component==4.3.0
 zope.event==4.2.0
