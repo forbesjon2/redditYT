@@ -43,7 +43,7 @@ numpy==1.17.4
 PAM==0.4.2
 parsedatetime==2.4
 pbr==3.1.1
-Pillow==8.1.1
+Pillow==8.2.0
 praw==6.4.0
 prawcore==1.0.1
 proglog==0.1.9
