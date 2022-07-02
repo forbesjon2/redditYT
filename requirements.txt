@@ -39,7 +39,7 @@ moviepy==1.0.1
 mutagen==1.43.0
 ndg-httpsclient==0.4.4
 netifaces==0.10.4
-numpy==1.17.4
+numpy==1.22.0
 PAM==0.4.2
 parsedatetime==2.4
 pbr==3.1.1
